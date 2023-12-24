@@ -15,9 +15,9 @@ import { RegistrationPageComponent } from './registration-page/registration-page
     AppComponent,
     LandingPageComponent,
     CreateExamComponent,
-    ListeningQuestionComponent
+    ListeningQuestionComponent,
     LoginPageComponent,
-    RegistrationPageComponent
+    RegistrationPageComponent,
   ],
   imports: [
     BrowserModule,

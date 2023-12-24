@@ -11,9 +11,9 @@ const routes: Routes = [
   {path: '' , redirectTo:'landing' , pathMatch:'full'},
   {path: 'landing',component:LandingPageComponent},
   {path: 'create' , component:CreateExamComponent},
-  {path: 'listen' , component:ListeningQuestionComponent}
+  {path: 'listen' , component:ListeningQuestionComponent},
   {path: 'login',component: LoginPageComponent},
-  {path: 'Registeration',component: RegistrationPageComponent}
+  {path: 'Registeration',component: RegistrationPageComponent},
 ];
 
 @NgModule({
