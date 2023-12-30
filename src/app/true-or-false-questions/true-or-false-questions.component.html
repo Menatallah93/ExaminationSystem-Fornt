@@ -1,0 +1,36 @@
+<div class="container my-5 rounded-3" style="border: 1px solid rgb(247, 245, 245);">
+    <form class=" bg-white px-4 mt-5" action="">
+
+   <div class="rounded-3 container my-3"  style="border: 1px solid gainsboro;">
+    <div data-mdb-input-init class="form-outline mb-4 pt-3">
+        <label class="form-label" for="form6Example7">ُEnter the question</label>
+        <textarea class="form-control" id="form6Example7" rows="5"></textarea>
+      </div>
+   </div>
+
+   <div class="form-check mt-5 rounded-3 container "  style="margin-left:2px;border: 1px solid gainsboro;">
+    <div data-mdb-input-init class="form-outline my-4 ">
+        <label class="form-label" for="form6Example7">ُEnter the answers</label>
+<!-- ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
+<br>
+<div class="btn-group">
+    <input type="radio" class="btn-check" name="options" id="option1" [(ngModel)]="selectedOption" value="false" autocomplete="off" checked />
+    <label class="btn btn-danger" for="option1" data-mdb-ripple-init>False</label>
+  
+    <input type="radio" class="btn-check" name="options" id="option2" [(ngModel)]="selectedOption" value="true" autocomplete="off" />
+    <label class="btn btn-success" for="option2" data-mdb-ripple-init>True</label>
+  </div>
+  
+    </div>
+      <div class="col-1 mt-4 pt-1">
+        
+      </div>
+
+  
+</div>
+<div class="text-end my-5">
+    <button type="submit" class="btn btn-primary">Add Question</button>
+  </div>
+   </form>
+   </div>
+   
