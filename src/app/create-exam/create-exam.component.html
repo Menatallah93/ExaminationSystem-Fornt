@@ -1,0 +1,158 @@
+<div class="bg-homeBackgroundColor sidebar:px-6 relative min-h-screen w-full max-w-full xl:px-8 2xl:px-10" style="overflow: hidden; height: 100vh;">
+
+    <div class="row justify-between">
+
+        <div class="col-1" style="height: 100vh; width: 120px; display: flex; padding-top: 32px;
+            flex-direction: column; position: sticky; top: 0px; z-index: 7; ">
+            <div>
+                <nav
+                    style="border-radius: 20px; box-shadow: rgba(0, 0, 0, 0.05) 2px 1px 7px; padding-bottom: 16px; background-color: white; box-shadow: rgb(100, 100, 100) 0px 0px 5px 0px;">
+                    <div class="sc-beeQDc eIAbpr">
+                        <a class="sidebar:justify-center sidebar:pb-4 sidebar:pl-0 sidebar:pt-6 group relative flex w-full items-center pl-4 hover:cursor-pointer md:pl-6"
+                            aria-label="Go to Dashboard">
+                            <div
+                                class="relative flex h-[90px] w-[90px] items-center justify-center rounded-full group-hover:bg-gray-50">
+                                <svg viewBox="0 0 67 87" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                    class="w-[38px]">
+                                    <path
+                                        d="M54.7641 29.9408C54.4229 29.9408 54.4229 29.9408 54.7641 29.9408L30.1993 43.929C30.1993 43.929 30.1993 43.929 29.8582 43.929L28.4935 41.882C28.4935 41.882 28.4935 41.882 28.4935 41.5408L61.2464 22.7761C62.2699 22.0937 62.6111 20.729 61.9288 20.0467L50.6699 0.599609H50.3288L6.99935 25.5055C0.85817 29.2584 -1.53007 37.1055 2.22288 43.5879L25.0817 83.1643V82.8232C23.3758 79.7526 24.7405 75.9996 27.4699 74.2937L42.1405 65.7643C53.0582 59.282 55.4464 58.2584 65.3405 52.4584C66.3641 51.7761 66.7052 50.4114 66.0229 49.729C63.6346 45.2937 57.8346 35.3996 54.7641 29.9408Z"
+                                        fill="url(#paint0_linear_501_16469)"></path>
+                                    <path
+                                        d="M27.4996 74.2775C24.429 75.9833 23.276 79.9883 24.9819 83.0589C26.6877 86.1295 30.4407 87.153 33.5113 85.4472L47.8047 77.2189C47.8047 77.2189 47.9531 77.1017 47.8407 76.9178L41.7979 65.9272L27.4996 74.2775Z"
+                                        fill="url(#paint1_linear_501_16469)"></path>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_501_16469" x1="10.245" y1="57.4048"
+                                            x2="65.3081" y2="25.5939" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F857A6"></stop>
+                                            <stop offset="1" stop-color="#FF5858"></stop>
+                                        </linearGradient>
+                                        <linearGradient id="paint1_linear_501_16469" x1="18.3761" y1="72.1751"
+                                            x2="54.5398" y2="80.7939" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#4E037A"></stop>
+                                            <stop offset="0.3515" stop-color="#2B0B3C"></stop>
+                                            <stop offset="1" stop-color="#9400D3"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div
+                                class="bg-primaryBlack sidebar:group-hover:flex absolute top-[118px] hidden min-w-fit flex-col items-center rounded-full border-solid p-1 px-2 text-xs font-bold text-white">
+                                Go to Dashboard
+                                <div class="sc-hZDyAQ lkiiVk">
+
+                                </div>
+                            </div>
+                        </a>
+
+                        <div>
+                            <a class="p-3" (click)="navigate('listen')">
+                                <span style=" background-color: rgb(249, 250, 251); text-align: center;border-radius: 10%;">
+                                    <span>
+                                        <img src="assets/images/ourimage/headphones.svg"
+                                            style="width: 60px;height: 60px;border-radius: 10px;">
+                                    </span>
+                                    <span>Listening</span>
+                                </span>
+                            </a>
+
+                            <a class="my-1 p-3">
+                                <span
+                                    style=" background-color: rgb(249, 250, 251); text-align: center;border-radius: 10%;">
+                                    <span>
+                                        <img src="assets/images/ourimage/reading.svg" style="width: 60px;height: 60px;">
+                                    </span>
+                                    <span class="sc-dkmUuB lalnkG">Reading</span>
+                                </span>
+                            </a>
+
+                            <a class="p-3 ">
+                                <span
+                                    style=" background-color: rgb(249, 250, 251); text-align: center;border-radius: 10%;">
+                                    <span>
+                                        <img src="assets/images/ourimage/write.svg" style="width: 60px;height: 60px;">
+                                    </span>
+                                    <span class="sc-dkmUuB lalnkG">Writing</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="col-5">
+            <div class="pt-4 bg-homeBackgroundColor sticky top-0 mb-6 shadow-sm">
+                <div
+                    class="sidebar:flex sidebar:justify-between sidebar:rounded-large sidebar:shadow-card sticky top-8 grid w-full max-w-full grid-cols-[min-content_1fr_min-content] items-center bg-white px-6 py-3 md:px-8 md:py-4 lg:px-9 lg:py-5">
+
+                    <a class="sidebar:hidden mr-4 flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 hover:cursor-pointer hover:opacity-80">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" class="w-6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4.5 13.26h15M10.55 19.284L4.5 13.26l6.05-6.025">
+                            </path>
+                        </svg>
+                    </a>
+
+                    <div class="min-w-0">
+                        <div class="flex w-full cursor-pointer items-center pr-4 hover:opacity-80 xl:pr-6">
+                          <div class="flex items-center">
+                            <ng-container *ngIf="!editMode; else editModeTemplate">
+                              <p class="text-primaryBlack truncate text-2xl font-extrabold" (click)="toggleEditMode()">{{ examTitle }}</p>
+                            </ng-container>
+                            <ng-template #editModeTemplate>
+                              <input type="text" [(ngModel)]="examTitle" (blur)="toggleEditMode()" />
+                            </ng-template>
+                          </div>
+                          <button type="button" class="mx-3 border-none cursor-pointer" (click)="toggleEditMode()">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14"
+                                    class="w-4 pb-[2px]">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5"
+                                        d="M6.704 1.627H4.523c-1.794 0-2.919 1.27-2.919 3.068v4.85c0 1.797 1.12 3.067 2.919 3.067H9.67c1.8 0 2.92-1.27 2.92-3.068v-2.35">
+                                    </path>
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5"
+                                        d="M5.15 6.37l4.36-4.359a1.391 1.391 0 011.966 0l.71.71a1.39 1.39 0 010 1.967l-4.38 4.38c-.238.237-.56.37-.896.37H4.725l.054-2.204c.009-.324.141-.634.37-.864z"
+                                        clip-rule="evenodd">
+                                    </path>
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" d="M8.847 2.685l2.663 2.663"></path>
+                                </svg>
+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar:max-w-none pb-16 items-center">
+                <div class="w-full pb-8">
+                    <div class="mt-6">
+                        <div style="width: 100%; height: 80vh; overflow-y: auto;" *ngIf="navlink === 'listen'" class="custom-scrollbar">
+                            <app-listening-question></app-listening-question>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-5 pb-4 pt-8">
+            <div class="sidebar:flex sticky h-screen overflow-auto scroll-smooth" id="resumepreview">
+                <div class="cursor-zoom-in">
+                    <div class="pointer-events-none origin-top-left" style="transform: scale(1);">
+                        <div class="pointer-events-auto inline-flex">
+                            <div id="resumePages">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
