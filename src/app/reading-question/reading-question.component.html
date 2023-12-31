@@ -1,0 +1,69 @@
+<div class="uploadWrapper container">
+  <form id="imageUploadForm" class="imageUploadForm">
+    <span class="helpText" id="helpText">Upload an image</span>
+    <input type="file" id="file" class="uploadButton" accept="image/*" />
+    <div id="uploadedImg" class="uploadedImg" >
+      <div style="height: 80%; width: 100%;text-align: center;">
+        <img id="previewImage" alt="Uploaded Image" style="height: 80%; width: 60%;" />
+      </div>
+      <span class="unveil"></span>
+    </div>
+  </form>
+</div>
+<textarea class="form-control mt-3" rows="3"></textarea>
+
+
+
+<div class="my-4" id="accordion" *ngFor="let item of addNewQ; let i = index">
+    <div class="card">
+      <div class="card-header" [attr.id]="'heading' + i">
+        <h5 class="mb-0">
+          <div class="btn btn-link" style="color: black; width: 100%; text-align: left;" data-toggle="collapse" [attr.data-target]="'#collapse' + i" [attr.aria-expanded]="!isCollapsed[i] ? 'true' : 'false'" [attr.aria-controls]="'collapse' + i" (click)="toggleCollapse(i)">
+            Question {{ i + 1 }}
+          </div>
+        </h5>
+      </div>
+  
+      <div [attr.id]="'collapse' + i" class="collapse" [class.show]="!isCollapsed[i]" [attr.aria-labelledby]="'heading' + i" data-parent="#accordion">
+        <div class="card-body">
+          <div class="d-flex justify-content-center align-items-center">
+            <div *ngIf="!item.buttonShow" class="d-flex justify-content-center align-items-center">
+              <a (click)="navigate('MCQ' , i+1)" class="btn btn-primary mt-4 rounded-pill" [ngClass]="{ 'active': item.navlink === 'MCQ' }" style="background-color: #3bafda; width: 8rem; height: 3rem;">
+                MCQ
+              </a>
+            
+              <a (click)="navigate('True/False Q' , i+1)" class="btn btn-primary mt-4 rounded-pill mx-2" [ngClass]="{ 'active': item.navlink === 'True/False Q' }" style="background-color: #3bafda; width: 8rem; height: 3rem;">
+                True/False Q
+              </a>
+            
+              <a (click)="navigate('Complete Q' , i+1)" class="btn btn-primary mt-4 rounded-pill" [ngClass]="{ 'active': item.navlink === 'Complete Q' }" style="background-color: #3bafda; width: 8rem; height: 3rem;">
+                Complete Q
+              </a>
+            </div>
+  
+            <div style="width: 100%;" *ngIf="item.navlink == 'MCQ'" class="custom-scrollbar">
+              <app-mcquestions [mcQuestionsData]="item"></app-mcquestions>
+            </div>
+            
+            <div style="width: 100%;" *ngIf="item.navlink == 'True/False Q'" class="custom-scrollbar">
+              <app-true-or-false-questions [trueFalseQuestionsData]="item"></app-true-or-false-questions>
+            </div>
+            
+            <div style="width: 100%;" *ngIf="item.navlink == 'Complete Q'" class="custom-scrollbar">
+              <app-completetheblanks [completeTheBlanksData]="item"></app-completetheblanks>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container d-flex justify-content-center align-items-center">
+    <button type="button" (click)="addQuestions()" class="btn btn-primary mt-4 rounded-pill" style="background-color: #3bafda; width: 13rem; height: 3.5rem; font-size: 20px;">
+      <i class="fas fa-plus"></i> Add Question
+    </button>
+  </div>
+  
+  
+  

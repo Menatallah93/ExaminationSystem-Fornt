@@ -16,6 +16,7 @@ import { ExamCardsComponent } from './exam-cards/exam-cards.component';
 import { ModelsComponent } from './models/models.component';
 import { ReadingComponent } from './reading/reading.component';
 import { AcadmicorgeneralComponent } from './acadmicorgeneral/acadmicorgeneral.component';
+import { ReadingQuestionComponent } from './reading-question/reading-question.component';
 
 
 const routes: Routes = [
@@ -31,11 +32,10 @@ const routes: Routes = [
   {path:'exam',component:ModelsComponent},
   {path:'cards',component:ExamCardsComponent},
   {path:'acadmic',component:AcadmicorgeneralComponent},
-
-{path: 'complete',component:CompletetheblanksComponent},
-
-{path: 'selectanswer',component:TrueOrFalseQuestionsComponent},
-{path: 'mcqquestion',component:MCQuestionsComponent},
+  {path: 'complete',component:CompletetheblanksComponent},
+  {path: 'selectanswer',component:TrueOrFalseQuestionsComponent},
+  {path: 'mcqquestion',component:MCQuestionsComponent},
+  {path: 'readingquestion',component:ReadingQuestionComponent},
 ];
 
 @NgModule({

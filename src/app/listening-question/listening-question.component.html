@@ -1,5 +1,4 @@
-
-<div class="upload container justify-content-center align-items-center">
+<div class="upload" style="width: 70%; padding: 0px; margin-right: auto;margin-left: auto;">
   <div class="row" style="justify-content: space-between;">
     <div class="upload__info col-8 pl-2">
         <svg class="ml-5" t="1581822650945" class="clip" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +33,7 @@
 </div>
 
 
-<div class="my-4" id="accordion" *ngFor="let item of addQuestion; let i = index">
+<div class="my-4" id="accordion" *ngFor="let item of addNewQ; let i = index">
   <div class="card">
     <div class="card-header" [attr.id]="'heading' + i">
       <h5 class="mb-0">
@@ -46,16 +45,33 @@
 
     <div [attr.id]="'collapse' + i" class="collapse" [class.show]="!isCollapsed[i]" [attr.aria-labelledby]="'heading' + i" data-parent="#accordion">
       <div class="card-body">
-        <div class="container d-flex justify-content-center align-items-center">
-          <button type="button" class="btn btn-primary mt-4 rounded-pill" style="background-color: #3bafda; width: 8rem; height: 3rem;">
-            MCQ
-          </button>
-          <button type="button" class="btn btn-primary mt-4 rounded-pill mx-2" style="background-color: #3bafda; width: 8rem; height: 3rem;">
-            True/False Q
-          </button>
-          <button type="button" class="btn btn-primary mt-4 rounded-pill" style="background-color: #3bafda; width: 8rem; height: 3rem;">
-            Complete Q
-          </button>
+        <div class="d-flex justify-content-center align-items-center">
+          <div *ngIf="!item.buttonShow" class="container d-flex justify-content-center align-items-center">
+            <a (click)="navigate('MCQ' , i+1)" class="btn btn-primary mt-4 rounded-pill" [ngClass]="{ 'active': item.navlink === 'MCQ' }" style="background-color: #3bafda; width: 8rem; height: 3rem;">
+              MCQ
+            </a>
+          
+            <a (click)="navigate('True/False Q' , i+1)" class="btn btn-primary mt-4 rounded-pill mx-2" [ngClass]="{ 'active': item.navlink === 'True/False Q' }" style="background-color: #3bafda; width: 8rem; height: 3rem;">
+              True/False Q
+            </a>
+          
+            <a (click)="navigate('Complete Q' , i+1)" class="btn btn-primary mt-4 rounded-pill" [ngClass]="{ 'active': item.navlink === 'Complete Q' }" style="background-color: #3bafda; width: 8rem; height: 3rem;">
+              Complete Q
+            </a>
+          </div>
+
+          <div style="width: 100%;" *ngIf="item.navlink == 'MCQ'" class="custom-scrollbar">
+            <app-mcquestions [mcQuestionsData]="item"></app-mcquestions>
+          </div>
+          
+          <div style="width: 100%;" *ngIf="item.navlink == 'True/False Q'" class="custom-scrollbar">
+            <app-true-or-false-questions [trueFalseQuestionsData]="item"></app-true-or-false-questions>
+          </div>
+          
+          <div style="width: 100%;" *ngIf="item.navlink == 'Complete Q'" class="custom-scrollbar">
+            <app-completetheblanks [completeTheBlanksData]="item"></app-completetheblanks>
+          </div>
+
         </div>
       </div>
     </div>
