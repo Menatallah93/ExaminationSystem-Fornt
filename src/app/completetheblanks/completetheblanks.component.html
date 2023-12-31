@@ -1,0 +1,46 @@
+<div class="container my-1 rounded-3 p-0" style="border: 1px solid rgb(247, 245, 245);">
+    <form class=" bg-white px-2 mt-2  " action="">
+
+   <div class="container my-3 px-1">
+    <div data-mdb-input-init class="form-outline mb-4 pt-2">
+        <label class="form-label" for="form6Example7"> Enter the question</label>
+        <textarea class="form-control" id="form6Example7" rows="5"></textarea>
+      </div>
+   </div>
+   <div class="container mt-4 pt-3 rounded-3" style="border: 1px solid gainsboro;">
+    <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="form6Example7">Enter the Answers</label>
+        <div class="d-flex">
+            <div class="form-outline col-11" data-mdb-input-init>
+                <input class="form-control mt-3"  style="width: 80%;" placeholder="enter the answer" />
+            </div>
+            <div class="col-1">
+              <button type="button" class="btn btn-primary my-3" (click)="addTextarea()">
+                <i class="fa fa-plus" style="font-size:17px"></i>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Additional textareas -->
+          <div *ngFor="let textarea of textareas; let i = index" class="form-outline d-flex align-items-center" data-mdb-input-init>
+            <div class="col-11">
+              <input class="form-control mt-3"  style="width: 80%;" placeholder="enter the answer"/>
+            </div>
+            <div class="col-1">
+              <button type="button" class="btn btn-danger mt-3 ml-2" (click)="removeTextarea(i)">
+                <i class="fa fa-minus" style="font-size:17px"></i>
+              </button>
+            </div>
+          </div>
+          
+          
+    </div>
+    </div>
+    <div class="text-end my-5">
+      <div class="text-end mt-5">
+        <a type="submit" class="btn btn-primary mx-2">Save Question</a>
+        <a type="submit" class="btn btn-primary" (click)="back()">Back</a>
+      </div>
+      </div>
+   </form>
+   </div>

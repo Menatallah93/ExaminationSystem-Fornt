@@ -55,7 +55,7 @@
                                 </span>
                             </a>
 
-                            <a class="my-1 p-3">
+                            <a class="my-1 p-3" (click)="navigate('readingquestion')">
                                 <span
                                     style=" background-color: rgb(249, 250, 251); text-align: center;border-radius: 10%;">
                                     <span>
@@ -126,12 +126,15 @@
                 </div>
             </div>
 
-            <div class="sidebar:max-w-none px-6 pb-16 items-center">
-                <div class="w-full pb-8">
+            <div class="pb-16 items-center">
+                <div class="pb-8">
                     <div class="mt-6">
-                        <div style="width: 100%; align-items: center center; height: 80vh; overflow-y: auto;" *ngIf="navlink === 'listen'" class="custom-scrollbar">
+                        <div style="height: 80vh; overflow-y: auto;" *ngIf="navlink === 'listen'" class="custom-scrollbar">
                             <app-listening-question></app-listening-question>
-                          </div>
+                        </div>
+                        <div style="height: 80vh; overflow-y: auto;" *ngIf="navlink === 'readingquestion'" class="custom-scrollbar">
+                            <app-reading-question></app-reading-question>
+                        </div>
                     </div>
                 </div>
             </div>
