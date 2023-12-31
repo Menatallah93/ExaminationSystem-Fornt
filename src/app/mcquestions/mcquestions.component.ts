@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { QuestionsService } from '../Services/questions.service';
 
 @Component({
   selector: 'app-mcquestions',
@@ -6,9 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./mcquestions.component.scss']
 })
 export class MCQuestionsComponent {
+  @Input() mcQuestionsData: any;
   textareas: string[] = [];
   answers: string[] = [];
 
+  constructor(private ques:QuestionsService){
+
+  }
   addTAnswers() {
     this.answers.push('');
   }
@@ -25,6 +30,20 @@ export class MCQuestionsComponent {
         }
       });
     }
+  }
+
+  back() {  
+    const foundQuestion = this.ques.questionNumber.find(qu => qu.id === this.mcQuestionsData.id);
+    const foundReadingQuestion = this.ques.readingQuestionNumber.find(qu => qu.id === this.mcQuestionsData.id);
+
+    if (foundQuestion) {
+      foundQuestion.buttonShow = false;
+      foundQuestion.navlink = "";
+    }
+    else if(foundReadingQuestion) {
+      foundReadingQuestion.buttonShow = false;
+      foundReadingQuestion.navlink = "";
+    } 
   }
   
 }
