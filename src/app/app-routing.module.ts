@@ -10,6 +10,7 @@ import { CreateExamComponent } from './create-exam/create-exam.component';
 import { ListeningQuestionComponent } from './listening-question/listening-question.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { WritingComponent } from './writing/writing.component';
 import { AduioComponent } from './aduio/aduio.component';
 import { ExamCardsComponent } from './exam-cards/exam-cards.component';
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path: 'create' , component:CreateExamComponent},
   {path: 'listen' , component:ListeningQuestionComponent},
   {path: 'login',component: LoginPageComponent},
-  {path: 'Registeration',component: RegistrationPageComponent},
+  {path: 'registeration',component: RegistrationPageComponent},
+  {path: 'dashboard', component: DashboardComponent},
   {path:'reading',component:ReadingComponent},
   {path:'audio', component:AduioComponent},
   {path:'writing',component:WritingComponent},

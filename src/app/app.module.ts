@@ -11,6 +11,7 @@ import { CreateExamComponent } from './create-exam/create-exam.component';
 import { ListeningQuestionComponent } from './listening-question/listening-question.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { AcadmicorgeneralComponent } from './acadmicorgeneral/acadmicorgeneral.component';
 import { ReadingQuestionComponent } from './reading-question/reading-question.component';
 
@@ -25,6 +26,7 @@ import { ReadingQuestionComponent } from './reading-question/reading-question.co
     ListeningQuestionComponent,
     LoginPageComponent,
     RegistrationPageComponent,
+    DashboardComponent,
     AcadmicorgeneralComponent,
     ReadingQuestionComponent,
   ],
