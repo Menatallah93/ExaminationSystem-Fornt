@@ -9,6 +9,7 @@ import { ListeningQuestionComponent } from './listening-question/listening-quest
 import { FormsModule } from '@angular/forms';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { RegistrationPageComponent } from './registration-page/registration-page
     ListeningQuestionComponent,
     LoginPageComponent,
     RegistrationPageComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

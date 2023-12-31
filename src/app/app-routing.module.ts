@@ -5,6 +5,7 @@ import { CreateExamComponent } from './create-exam/create-exam.component';
 import { ListeningQuestionComponent } from './listening-question/listening-question.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'create' , component:CreateExamComponent},
   {path: 'listen' , component:ListeningQuestionComponent},
   {path: 'login',component: LoginPageComponent},
-  {path: 'Registeration',component: RegistrationPageComponent},
+  {path: 'registeration',component: RegistrationPageComponent},
+  {path: 'dashboard', component: DashboardComponent}
 ];
 
 @NgModule({
