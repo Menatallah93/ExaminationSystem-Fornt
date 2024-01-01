@@ -14,6 +14,7 @@ import { RegistrationPageComponent } from './registration-page/registration-page
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AcadmicorgeneralComponent } from './acadmicorgeneral/acadmicorgeneral.component';
 import { ReadingQuestionComponent } from './reading-question/reading-question.component';
+import { WritingQuestionComponent } from './writing-question/writing-question.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ReadingQuestionComponent } from './reading-question/reading-question.co
     DashboardComponent,
     AcadmicorgeneralComponent,
     ReadingQuestionComponent,
+    WritingQuestionComponent,
   ],
   imports: [
     BrowserModule,

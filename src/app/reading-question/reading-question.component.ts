@@ -15,8 +15,6 @@ export class ReadingQuestionComponent implements OnInit {
 
   isCollapsed: boolean[] = [];
   addNewQ: any[] = []
-  textareaContent = new FormControl('');
-  imageUrl: string = 'http://i.pravatar.cc/500?img=7';
 
   constructor(private ques: QuestionsService, private el: ElementRef, private cdr: ChangeDetectorRef) { }
 
@@ -68,7 +66,6 @@ export class ReadingQuestionComponent implements OnInit {
       }, 5000);
     });
   }
-
   readURL(input: any, uploadedImg: any, helpText: any, previewImage: any, form: any) {
     if (input.files && input.files[0]) {
       const reader = new FileReader();

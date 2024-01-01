@@ -11,6 +11,17 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     vertical-align: baseline
 }
 
+a .scale-icon {
+    display: block;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  a .scale-icon:hover {
+    transform: scale(1.1); 
+    background-color: #e2e8f0;
+  }
+
 .custom-scrollbar::-webkit-scrollbar {
     width: 5px;
     color: white;

@@ -39,7 +39,6 @@ export class ListeningQuestionComponent implements OnInit {
   }
 
   private sleep = (time: number) => new Promise(resolve => setTimeout(resolve, time));
-
   private uploadFiles = async () => {
     const upload = document.querySelector(".upload") as HTMLElement | null;
     const uploadBtn = document.querySelector(".upload__button") as HTMLButtonElement | null;

@@ -18,6 +18,7 @@ import { ModelsComponent } from './models/models.component';
 import { ReadingComponent } from './reading/reading.component';
 import { AcadmicorgeneralComponent } from './acadmicorgeneral/acadmicorgeneral.component';
 import { ReadingQuestionComponent } from './reading-question/reading-question.component';
+import { WritingQuestionComponent } from './writing-question/writing-question.component';
 
 
 const routes: Routes = [
@@ -38,6 +39,7 @@ const routes: Routes = [
   {path: 'selectanswer',component:TrueOrFalseQuestionsComponent},
   {path: 'mcqquestion',component:MCQuestionsComponent},
   {path: 'readingquestion',component:ReadingQuestionComponent},
+  {path: 'writingquestion',component:WritingQuestionComponent},
 ];
 
 @NgModule({

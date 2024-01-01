@@ -8,7 +8,7 @@
                 <nav
                     style="border-radius: 20px; box-shadow: rgba(0, 0, 0, 0.05) 2px 1px 7px; padding-bottom: 16px; background-color: white; box-shadow: rgb(100, 100, 100) 0px 0px 5px 0px;">
                     <div class="sc-beeQDc eIAbpr">
-                        <a class="sidebar:justify-center sidebar:pb-4 sidebar:pl-0 sidebar:pt-6 group relative flex w-full items-center pl-4 hover:cursor-pointer md:pl-6"
+                        <!-- <a class="sidebar:justify-center sidebar:pb-4 sidebar:pl-0 sidebar:pt-6 group relative flex w-full items-center pl-4 hover:cursor-pointer md:pl-6"
                             aria-label="Go to Dashboard">
                             <div
                                 class="relative flex h-[90px] w-[90px] items-center justify-center rounded-full group-hover:bg-gray-50">
@@ -42,22 +42,21 @@
 
                                 </div>
                             </div>
-                        </a>
+                        </a> -->
 
                         <div>
                             <a class="p-3" (click)="navigate('listen')">
-                                <span style=" background-color: rgb(249, 250, 251); text-align: center;border-radius: 10%;">
+                                <span class="scale-icon" style="text-align: center;border-radius: 10%;">
                                     <span>
                                         <img src="assets/images/ourimage/headphones.svg"
                                             style="width: 60px;height: 60px;border-radius: 10px;">
                                     </span>
-                                    <span>Listening</span>
+                                    <span class="sc-dkmUuB lalnkG">Listening</span>
                                 </span>
                             </a>
 
                             <a class="my-1 p-3" (click)="navigate('readingquestion')">
-                                <span
-                                    style=" background-color: rgb(249, 250, 251); text-align: center;border-radius: 10%;">
+                                <span class="scale-icon" style="text-align: center;border-radius: 10%;">
                                     <span>
                                         <img src="assets/images/ourimage/reading.svg" style="width: 60px;height: 60px;">
                                     </span>
@@ -65,9 +64,8 @@
                                 </span>
                             </a>
 
-                            <a class="p-3 ">
-                                <span
-                                    style=" background-color: rgb(249, 250, 251); text-align: center;border-radius: 10%;">
+                            <a class="p-3 " (click)="navigate('writingquestion')">
+                                <span class="scale-icon" style="text-align: center;border-radius: 10%;">
                                     <span>
                                         <img src="assets/images/ourimage/write.svg" style="width: 60px;height: 60px;">
                                     </span>
@@ -134,6 +132,9 @@
                         </div>
                         <div style="height: 80vh; overflow-y: auto;" *ngIf="navlink === 'readingquestion'" class="custom-scrollbar">
                             <app-reading-question></app-reading-question>
+                        </div>
+                        <div style="height: 80vh; overflow-y: auto;" *ngIf="navlink === 'writingquestion'" class="custom-scrollbar">
+                            <app-writing-question></app-writing-question>
                         </div>
                     </div>
                 </div>
