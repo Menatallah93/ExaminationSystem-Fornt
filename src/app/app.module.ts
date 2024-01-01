@@ -13,6 +13,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
 import { AcadmicorgeneralComponent } from './acadmicorgeneral/acadmicorgeneral.component';
 import { ReadingQuestionComponent } from './reading-question/reading-question.component';
+import { WritingQuestionComponent } from './writing-question/writing-question.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ReadingQuestionComponent } from './reading-question/reading-question.co
     RegistrationPageComponent,
     AcadmicorgeneralComponent,
     ReadingQuestionComponent,
+    WritingQuestionComponent,
   ],
   imports: [
     BrowserModule,
