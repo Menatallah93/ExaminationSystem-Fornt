@@ -15,6 +15,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AcadmicorgeneralComponent } from './acadmicorgeneral/acadmicorgeneral.component';
 import { ReadingQuestionComponent } from './reading-question/reading-question.component';
 import { WritingQuestionComponent } from './writing-question/writing-question.component';
+import { ExamCardsComponent } from './exam-cards/exam-cards.component';
+import { ModelsComponent } from './models/models.component';
+import { WritingComponent } from './writing/writing.component';
+import { ReadingComponent } from './reading/reading.component';
+import { AduioComponent } from './aduio/aduio.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +28,17 @@ import { WritingQuestionComponent } from './writing-question/writing-question.co
     MCQuestionsComponent,
     CompletetheblanksComponent,
     TrueOrFalseQuestionsComponent,
-     CreateExamComponent,
+    CreateExamComponent,
     ListeningQuestionComponent,
     LoginPageComponent,
     RegistrationPageComponent,
     DashboardComponent,
     AcadmicorgeneralComponent,
+    ExamCardsComponent,
+    ModelsComponent,
+    ReadingComponent,
+    AduioComponent,
+    WritingComponent,
     ReadingQuestionComponent,
     WritingQuestionComponent,
   ],

@@ -13,6 +13,7 @@ export class ListeningQuestionComponent implements OnInit {
 
   isCollapsed: boolean[] = [];
   addNewQ: any[] = []
+  userEnteredTime: string = '';
  
 
   constructor(private ques: QuestionsService) { }

@@ -9,6 +9,8 @@ import { QuestionsService } from '../Services/questions.service';
 export class WritingQuestionComponent implements OnInit {
   isCollapsed: boolean[] = [];
   addNewQ: any[] = []
+  userEnteredTime: string = '';
+
 
   constructor(private ques: QuestionsService) { }
 
