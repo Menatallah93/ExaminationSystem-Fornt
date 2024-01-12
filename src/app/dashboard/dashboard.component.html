@@ -25,7 +25,7 @@
                 </li><!-- End Search Icon-->
 
                 <li class="nav-item d-block">
-                    <a class="nav-link" id="createExam">Create Exam</a>
+                    <a class="nav-link" routerLink="/create" id="createExam">Create Exam</a>
                 </li>
 
                 <li class="nav-item d-block">
@@ -301,13 +301,13 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Recent Exams</h5>
 
-                                    <table class="table table-borderless datatable">
+                                    <table class="table table-borderless datatable text-center">
                                         <thead>
                                             <tr>
                                                 <th scope="col">Exam num</th>
                                                 <th scope="col">Name</th>
                                                 <th scope="col">Num Of Expert</th>
-                                                <th scope="col">Show</th>
+                                                <!-- <th scope="col">Show</th> -->
                                                 <th scope="col">Edit</th>
                                             </tr>
                                         </thead>
@@ -321,17 +321,17 @@
                                             </tr> -->
                                             <tr>
                                                 <th scope="row">#1</th>
-                                                <td>Reading exam #1</td>
+                                                <td>exam #1</td>
                                                 <td>Ahmed Ali</td>
-                                                <td><a href="#" class="badge bg-light w-75"><i class="bi bi-eye-fill fa-2x"></i></a></td>
-                                                <td><a href="#" class="badge bg-light w-75"><i class="bi bi-pencil-square fa-2x"></i></a></td>
+                                                <!-- <td><a href="#" class="badge bg-light w-75"><i class="bi bi-eye-fill fa-2x"></i></a></td> -->
+                                                <td><a routerLink="/create" class="badge bg-light w-75"><i class="bi bi-pencil-square fa-2x"></i></a></td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">#2</th>
-                                                <td>Listening exam #1</td>
+                                                <td>exam #2</td>
                                                 <td>Yazan Seif</td>
-                                                <td><a href="#" class="badge bg-light w-75"><i class="bi bi-eye-fill fa-2x"></i></a></td>
-                                                <td><a href="#" class="badge bg-light w-75"><i class="bi bi-pencil-square fa-2x"></i></a></td>
+                                                <!-- <td><a href="#" class="badge bg-light w-75"><i class="bi bi-eye-fill fa-2x"></i></a></td> -->
+                                                <td><a routerLink="/create" class="badge bg-light w-75"><i class="bi bi-pencil-square fa-2x"></i></a></td>
                                             </tr>
 
                                         </tbody>
@@ -350,25 +350,31 @@
                                 <div class="card-body pb-0">
                                     <h5 class="card-title">Accepting New Experts</h5>
 
-                                    <table class="table table-borderless">
+                                    <table class="table table-borderless text-center">
                                         <thead>
                                             <tr>
-                                                <th scope="col">Image</th>
+                                                <!-- <th scope="col">Image</th> -->
                                                 <th scope="col">Name</th>
+                                                <th scope="col">Email</th>
+                                                <th scope="col">Phone Number</th>
                                                 <th scope="col">Accept</th>
                                                 <th scope="col">Reject</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <th scope="row"><a href="#"><img src="../../assets/images/dashboard/messages-3.jpg" alt=""></a></th>
+                                                <!-- <th scope="row"><a href="#"><img src="../../assets/images/dashboard/messages-3.jpg" alt=""></a></th> -->
                                                 <td><a href="#" class="text-primary fw-bold">Hassan mohamed</a></td>
+                                                <td><a href="#" class="text-primary fw-bold">Hassan@gmail.com</a></td>
+                                                <td><a href="#" class="text-primary fw-bold">+201111111111</a></td>
                                                 <td><a href="#"><img src="../../assets/images/dashboard/accept.png" style="width: 2rem;height: 2rem;"></a></td>
                                                 <td><a href="#"><img src="../../assets/images/dashboard/decline.png" style="width: 2.7rem;height: 2.7rem;"></a></td>
                                             </tr>
                                             <tr>
-                                                <th scope="row"><a href="#"><img src="../../assets/images/dashboard/messages-1.jpg" alt=""></a></th>
+                                                <!-- <th scope="row"><a href="#"><img src="../../assets/images/dashboard/messages-1.jpg" alt=""></a></th> -->
                                                 <td><a href="#" class="text-primary fw-bold">Haya Kazem</a></td>
+                                                <td><a href="#" class="text-primary fw-bold">Haya@gmail.com</a></td>
+                                                <td><a href="#" class="text-primary fw-bold">+201111111111</a></td>
                                                 <td><a href="#"><img src="../../assets/images/dashboard/accept.png" style="width: 2rem;height: 2rem;"></a></td>
                                                 <td><a href="#"><img src="../../assets/images/dashboard/decline.png" style="width: 2.7rem;height: 2.7rem;"></a></td>
                                             </tr>
