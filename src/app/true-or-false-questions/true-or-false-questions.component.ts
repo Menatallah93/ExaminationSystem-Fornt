@@ -8,7 +8,7 @@ import { QuestionsService } from '../Services/questions.service';
 })
 export class TrueOrFalseQuestionsComponent {
   @Input() trueFalseQuestionsData: any;
-  selectedOption: string = 'false'; // You can initialize it with a default value
+  selectedOption: string = 'false';
 
   constructor(private renderer: Renderer2, private el: ElementRef , private ques:QuestionsService) {}
 
@@ -18,7 +18,6 @@ export class TrueOrFalseQuestionsComponent {
     radios.forEach((radio: any) => {
       this.renderer.listen(radio, 'click', () => {
         console.log(radio.value)
-        // Do something on click
       });
     });
   }

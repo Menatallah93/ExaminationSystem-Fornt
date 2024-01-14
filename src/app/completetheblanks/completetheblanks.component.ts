@@ -8,22 +8,32 @@ import { QuestionsService } from '../Services/questions.service';
 })
 export class CompletetheblanksComponent {
   @Input() completeTheBlanksData: any;
-  textareas: string[] = [];
-
-  constructor(private ques:QuestionsService){}
-
-  addTextarea() {
-    this.textareas.push('');
-  }
-  removeTextarea(index: number) {
-    if (index >= 0 && index < this.textareas.length) {
-      console.log(index);
+  rows: any[] = [];
+  currentNumber: number = 1;
   
-      this.textareas.forEach((item, i) => {
-        if (i === index) {
-          this.textareas.splice(i, 1);
-        }
-      });
+  constructor(private ques: QuestionsService) {}
+  
+  addRow() {
+    const newRow = {};
+    this.rows.push(newRow);
+    this.updateNumbers();
+  }
+  
+  removeRow(index: number) {
+    this.rows.splice(index, 1);
+    this.updateNumbers();
+  }
+  
+  private updateNumbers() {
+    this.rows.forEach((row, index) => {
+      row.number = index + 1;
+    });
+  
+    if (this.rows.length === 0) {
+      this.currentNumber = 1;
+    } else {
+      const lastRow = this.rows[this.rows.length - 1];
+      this.currentNumber = lastRow.number + 1;
     }
   }
 
