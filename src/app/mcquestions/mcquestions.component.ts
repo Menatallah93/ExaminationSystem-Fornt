@@ -8,27 +8,49 @@ import { QuestionsService } from '../Services/questions.service';
 })
 export class MCQuestionsComponent {
   @Input() mcQuestionsData: any;
-  textareas: string[] = [];
+  rows: any[] = [];
+  answerRows: any[] = [];
+
+  currentLetter: string = 'A';
   answers: string[] = [];
 
   constructor(private ques:QuestionsService){
 
   }
-  addTAnswers() {
-    this.answers.push('');
+  addAnswers() {
+    const newRow = { value: '' };
+    this.answerRows.push(newRow);
   }
-  addTextarea() {
-    this.textareas.push('');
+
+  removeAnswers(index: number) {
+      this.answerRows.splice(index, 1);
   }
-  removeTextarea(index: number) {
-    if (index >= 0 && index < this.textareas.length) {
-      console.log(index);
-  
-      this.textareas.forEach((item, i) => {
-        if (i === index) {
-          this.textareas.splice(i, 1);
-        }
-      });
+
+
+  addRow() {
+    const newRow = {
+      letter: this.currentLetter
+    };
+    this.rows.push(newRow);
+    this.updateCurrentLetter();
+  }
+
+  removeRow(index: number) {
+    this.rows.splice(index, 1);
+    this.updateCurrentLetter();
+  }
+
+  private updateCurrentLetter() {
+    this.rows.forEach((row, index) => {
+      row.letter = String.fromCharCode('A'.charCodeAt(0) + index);
+    });
+
+    if (this.rows.length === 0) {
+      this.currentLetter = 'A';
+    } else {
+      const lastLetter = this.rows[this.rows.length - 1].letter;
+      const nextCharCode = lastLetter.charCodeAt(0) + 1;
+      this.currentLetter = String.fromCharCode(nextCharCode);
     }
   }
 

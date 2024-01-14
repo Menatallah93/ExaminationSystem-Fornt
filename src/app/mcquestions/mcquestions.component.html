@@ -1,70 +1,122 @@
 <div class="container my-1 p-0">
-    <form class=" bg-white px-1" action="">
+  <form class=" bg-white px-1" action="">
 
-   <div class="rounded-3 container my-3"  style="border: 1px solid gainsboro;">
-    <div data-mdb-input-init class="form-outline mb-4 pt-3">
+    <div class="rounded-3 container my-3" style="border: 1px solid gainsboro;">
+      <div data-mdb-input-init class="form-outline mb-4 pt-3">
         <label class="form-label" for="form6Example7">Enter the question</label>
         <textarea class="form-control" id="form6Example7" rows="2"></textarea>
       </div>
-   </div>
-      <div class="container mt-5 pt-3 rounded-3" style="border: 1px solid gainsboro;">
-        <div data-mdb-input-init class="form-outline mb-4">
-            <label class="form-label" for="form6Example7">Enter the Answers</label>
-            <div class="d-flex">
-                <div class="form-outline col-11" data-mdb-input-init>
-                  <textarea class="form-control" id="textAreaExample" rows="1" style="width: 80%;"></textarea>
-                </div>
-                <div class="col-1">
-                  <button type="button" class="btn btn-primary" (click)="addTextarea()">
-                    <i class="fa fa-plus" style="font-size:17px"></i>
-                  </button>
-                </div>
-              </div>
-              
-              <!-- Additional textareas -->
-              <div *ngFor="let textarea of textareas; let i = index" class="form-outline d-flex align-items-center" data-mdb-input-init>
-                <div class="col-11">
-                  <textarea class="form-control mt-3" rows="1" style="width: 80%;" ></textarea>
-                </div>
-                <div class="col-1">
-                  <button type="button" class="btn btn-danger ml-2" (click)="removeTextarea(i)">
-                    <i class="fa fa-minus" style="font-size:17px"></i>
-                  </button>
-                </div>
-              </div>
-              
-              
-        </div>
-        <!-- //Marwa     -->
-        <div class="row col-12 mx-1 mb-2" >
-              <p class="fw-bold p-0">How satisfied are you with your answers ?</p>
-              <div class="form-check mb-2">
-                <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
-                <label class="form-check-label" for="radioExample1">
-                    Only one choice
-                </label>
-              </div>
-              <div class="form-check mb-2">
-                <input class="form-check-input" type="radio" name="exampleForm" id="radioExample2" />
-                <label class="form-check-label" for="radioExample2">
-                    More than one choice       
-                </label>
-              </div>
-           
-            
-            </div>
+    </div>
 
-        </div>
-        <div class="form-check mt-3 rounded-3 container d-flex"  style="margin-left:2px;border: 1px solid gainsboro;">
-            <div data-mdb-input-init class="form-outline my-4">
-                <label class="form-label" for="form6Example7">Enter the answers</label>
-                <input type="text" class="form-control" placeholder="Enter The Answer"/>
+
+    <div class="container mt-5 pt-3 rounded-3" style="border: 1px solid gainsboro;">
+      <div class="form-outline mb-4">
+        <label class="form-label" for="form6Example7">Enter the Answers</label>
+         <!-- Add the initial row -->
+         <div class="d-flex">
+          <div class="col-10">
+            <div class="d-flex">
+              <div class="form-outline col-9">
+                <textarea class="form-control mt-3" rows="1" style="width: 80%;"></textarea>
               </div>
-        </div>
-        
-        <div class="text-end mt-5">
-            <a type="submit" class="btn btn-primary mx-2">Save Question</a>
-            <a type="submit" class="btn btn-primary" (click)="back()">Delete</a>
+              <div class="col-3 row p-0 mt-3">
+                <div class="col-2 p-0 mt-1">
+                  <p class="mx-1">{{ currentLetter }}</p>
+                </div>
+              <div class="col-10">
+                <button type="button" class="btn btn-primary" (click)="addRow()">
+                  <i class="fa fa-plus" style="font-size:17px"></i>
+                </button>
+              </div>
+              </div>
+            </div>
           </div>
-    </form>
+        </div>
+      
+        <!-- Additional textareas -->
+        <div class="additional-textareas">
+          <div *ngFor="let row of rows; let i = index" class="form-outline d-flex align-items-center" data-mdb-input-init>
+            <div class="col-10">
+              <div class="d-flex">
+                <div class="form-outline col-9">
+                  <textarea class="form-control mt-3" rows="1" style="width: 80%;"></textarea>
+                </div>
+                <div class="col-3 row p-0 mt-3">
+                  <div class="col-2 p-0 mt-1">
+                    <p class="mx-1">{{ row.letter }}</p>
+                  </div>
+                  <div class="col-10">
+                    <button type="button" class="btn btn-danger ml-2" (click)="removeRow(i)">
+                      <i class="fa fa-minus" style="font-size:17px"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+       
+      </div>
+      
+      
+      
+
+      
+      <!-- //Marwa     -->
+      <div class="row col-12 mx-1 mb-2">
+        <p class="fw-bold p-0">How satisfied are you with your answers ?</p>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
+          <label class="form-check-label" for="radioExample1">
+            Only one choice
+          </label>
+        </div>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="radio" name="exampleForm" id="radioExample2" />
+          <label class="form-check-label" for="radioExample2">
+            More than one choice
+          </label>
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+    <div class="form-check mt-3 rounded-3 container d-flex" style="margin-left:2px;border: 1px solid gainsboro;">
+      <div data-mdb-input-init class="form-outline my-4">
+        
+        <div class="row">
+          <div class="col-10">
+            <label class="form-label" for="form6Example7">Click (+) to enter the answers</label>
+          </div>
+        
+          <div class="col-2">
+            <button type="button" class="btn btn-primary" (click)="addAnswers()">
+              <i class="fa fa-plus" style="font-size:17px"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="row my-3" *ngFor="let row of answerRows; let i = index">
+          <div class="col-6">
+            <input type="text" answerRows="1" class="form-control" style="width: 70px;" 
+                   maxlength="1" pattern="[A-Za-z]" title="Please enter a single letter"/>
+          </div>
+          
+          <div class="col-6">
+            <button type="button" class="btn btn-danger" (click)="removeAnswers(i)">
+              <i class="fa fa-minus" style="font-size:17px"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-end mt-5">
+      <a type="submit" class="btn btn-primary mx-2">Save Question</a>
+      <a type="submit" class="btn btn-primary" (click)="back()">Delete</a>
+    </div>
+  </form>
 </div>
